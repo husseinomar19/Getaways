@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/home.css">
@@ -10,18 +14,61 @@
 <body>
     <header>
         <nav>
-            <a id="logo" href="home.php">Getaways.nl</a>
+            <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
             <ul>
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="over.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
             <button id="inlog">Inloggen</button>
         </nav>
-    </header>
-    <section class="main">
+    </header> 
+    <section class="form">
+        <h2>Unieke vakantie, weg van de massa</h2>
+         <form action="" method="get">
+           <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label> 
+           <input type="text" name="bestemming" placeholder="Bestemming">
+           <label for="ver"><i class="fa-solid fa-calendar-days"></i></label>
+           <input type="text" name="ver" placeholder="Vertrekdatum">
+           <label for="kamer"><i class="fa-solid fa-person"></i></label>
+           <input type="text" name="kamer" placeholder="Kamer(s),2 reizigers">
+           <label for="lucht"><i class="fa-solid fa-plane"></i></label>
+           <input type="text" name="lucht" placeholder="Luchthaven">
+           <button type="submit" name="zoeken">Zoeken</button>
+         </form>
+    </section>  
 
+    <section class="ontdeken">
+        <div class="ontdek">
+        <img src="../IMG/ontdek.jpg" alt="ontdeken">
+         <h2 class="ontdektit">Verleidelijke last minutes</h2>
+         <button class="ptn-ontdek">Ontdek</button>
+        </div>
+        <div class="ontdek1">
+        <img src="../IMG/ontdek1.jpg" alt="ontdeken">
+        <h2 class="ontdektit">Rustige zomervakantie</h2>
+        <button class="ptn-ontdek">Ontdek</button>
+        </div>
+        <div class="ontdek2">
+        <img src="../IMG/ontdek2.jpg" alt="ontdeken">
+        <h2 class="ontdektit">Beste prijzen</h2>
+         <button class="ptn-ontdek">Ontdek</button>
+        </div>
     </section>
-   
+
+    <section class="iconmain">
+        <div class="icon">
+           <i class="fa-solid fa-plane"></i>
+           <h2>Eenvoedig Boeken</h2>
+        </div>
+        <div class="icon">
+           <i class="fa-solid fa-thumbs-up"></i>
+           <h2>Hand Picked</h2>
+        </div>
+        <div class="icon">
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <h2>Financiële Zekerheid</h2>
+        </div>
+    </section>
 </body>
 </html>
