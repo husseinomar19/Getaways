@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/inlog.css">
     <title>Getaways</title>
 </head>
 <body>
@@ -20,8 +21,20 @@
                 <li><a href="over.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
+            <div class="inloggenptn">
+            <i class="fa-solid fa-user"></i>
             <button id="inlog">Inloggen</button>
+            </div>
         </nav>
+        <form class="admininlog" id="admininlog" action="" method="post">
+        <i class="fa-solid fa-user"></i>
+        <h2>Inloggen</h2>
+        <label for="Email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <label for="password">wachtwoord</label>
+        <input type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord">
+        <button name="inloggen">Inloggen</button>
+        </form>
     </header> 
     <section class="form">
         <h2>Unieke vakantie, weg van de massa</h2>
@@ -70,5 +83,6 @@
         <h2>Financiële Zekerheid</h2>
         </div>
     </section>
+    <script src="../index/main.js"></script>
 </body>
 </html>

@@ -46,11 +46,28 @@ nav ul li a:hover {
 #logospan{
     color: #4f4c4c;
 }
+.admininlog{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 20vh;
+    z-index: 1;
+    width: 300px;
+    height: 400px;
+    gap: 1rem;
+    left: 38rem;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
 /* hier komt form styling */
 .form{
     background-image: url(../IMG/homeimg.jpg);
     background-repeat: no-repeat;
-    object-fit: cover;
     display: flex;
     background-size: 100vw 100vh;
     justify-content: center;
@@ -118,6 +135,7 @@ form button{
 .ontdek1 img{
     width: 400px;
     height:400px;
+    
 }
 .ontdek2{
     display: flex;
