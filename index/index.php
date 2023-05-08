@@ -8,19 +8,6 @@
     <title>Getaways</title>
 </head>
 <body>
-    <header>
-      <nav>
-        <a id="logo" href="index.php">Getaways.nl</a>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Over ons</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-        <button id="inlog">Inloggen</button>
-      </nav>
-    </header>
-    <section class="main">
-        
-    </section>
+    <h1>hallo</h1>
 </body>
 </html>
