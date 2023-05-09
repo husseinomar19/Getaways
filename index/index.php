@@ -83,6 +83,78 @@
         <h2>Financiële Zekerheid</h2>
         </div>
     </section>
+
+    <section class="inspiratie">
+      <div class="insp">
+<img src="../IMG/inspiratie4jpg.jpg" alt="inspiratie">
+<h2 class="in-tit">Op vakantie met het gezin</h2>
+<button class="in-ptn">Ontdek</button>
+      </div>
+      <div class="insp">
+<img src="../IMG/inspiratie4jpg.jpg" alt="inspiratie">
+<h2 class="in-tit">Op vakantie met het gezin</h2>
+<button class="in-ptn">Ontdek</button>
+      </div>
+      <div class="insp">
+<img src="../IMG/inspiratie4jpg.jpg" alt="inspiratie">
+<h2 class="in-tit">Op vakantie met het gezin</h2>
+<button class="in-ptn">Ontdek</button>
+      </div>
+      <div class="insp">
+<img src="../IMG/inspiratie4jpg.jpg" alt="inspiratie">
+<h2 class="in-tit">Op vakantie met het gezin</h2>
+<button class="in-ptn">Ontdek</button>
+      </div>
+    </section>
+
+    <section class="boeken-tit">
+        <h2>Top 6 favoriete ontdekkingen</h2>
+    </section>
+
+    <section class="boeken">  
+     <div class="main-boeken">
+
+<?php
+include('config.php');
+
+?>
+        <div class="boeken-blok">   
+            <div class="boeken-img">
+                <img src="../IMG/inspiratie.jpg" alt="boeken">
+            </div>
+            <div class="boeken-info">
+                 <h2 class="tit-boeken">Spanje</h2>
+                 <h3 class="boeken-prijs">400$</h3>
+                 <a href="">Boeken</a>               
+            </div>
+        </div>
+
+
+        
+
+          
+     </div>
+    </section>
+
+    <section class="footerinmg">
+        <img src="../IMG/inspiratie2.jpg" alt="footer">
+        <h2>Unieke vakantie, weg van de massa</h2>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="">Voorwaarden</a></li>
+            <li><a href="">Zekerheden</a></li>
+            <li><a href="">Cookies</a></li>
+            <li><a href="">Privacy policy</a></li>
+            <li><a href="">Sitemap</a></li>
+        </ul>
+        <ul>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+    </footer>
+
     <script src="../index/main.js"></script>
 </body>
 </html>
