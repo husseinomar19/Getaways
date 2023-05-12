@@ -153,6 +153,7 @@ include('config.php');
             <li><i class="fa-brands fa-instagram"></i></li>
             <li><i class="fa-brands fa-twitter"></i></li>
         </ul>
+        <a id="adminpage" href="admin.php">Als admin inloggen</a>
     </footer>
 
     <script src="../index/main.js"></script>
