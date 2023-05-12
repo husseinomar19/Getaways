@@ -34,6 +34,10 @@
         <label for="password">wachtwoord</label>
         <input type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord">
         <button name="inloggen">Inloggen</button>
+        <ul>
+            <li><a href="account.php">Registreren</a></li>
+            <li><a href="#">Wachtwoord vergeten</a></li>
+           </ul>
         </form>
     </header> 
     <section class="form">
@@ -117,17 +121,25 @@
 <?php
 include('config.php');
 
+$vragen = $con->query("SELECT * FROM reizen ");
+while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
+    echo"
+    <div class='boeken-blok'>   
+    <div class='boeken-img'>
+        <img src='../reizenimg/$row[img]' alt='boeken'>
+    </div>
+    <div class='boeken-info'>
+         <h2 class='tit-boeken'>$row[naam]</h2>
+         <h3 class='boeken-prijs'>$row[prijs]</h3>
+         <a href=''>Boeken</a>               
+    </div>
+</div>
+
+    ";
+}
+
 ?>
-        <div class="boeken-blok">   
-            <div class="boeken-img">
-                <img src="../IMG/inspiratie.jpg" alt="boeken">
-            </div>
-            <div class="boeken-info">
-                 <h2 class="tit-boeken">Spanje</h2>
-                 <h3 class="boeken-prijs">400$</h3>
-                 <a href="">Boeken</a>               
-            </div>
-        </div>
+       
 
 
         

@@ -47,29 +47,78 @@ nav ul li a:hover {
     color: #4f4c4c;
 }
 .admininlog{
-    background-color: #000;
+    background-color: aliceblue;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 20vh;
+    top: 8rem;
     z-index: 1;
     width: 300px;
-    height: 400px;
+    padding:1rem 0;
     gap: 1rem;
     left: 38rem;
     border-radius: 5px;
+    color: #000;
+    font-weight: bold; 
+    border-radius: 5px;
     visibility: hidden;
 }
+.admininlog ul{
+    list-style: none;
+    text-align: center;
+}
+.admininlog ul li{
+    margin: 1rem;
+}
+.admininlog ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+.admininlog ul li a:hover{
+    background-color: #8000ff;
+    color: #fff;
+}
+.admininlog input{
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    background-color: aliceblue;
+    font-weight: bold;
+    border-radius: 5px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+.admininlog button{
+    background-color: #8000ff;
+    border: none;
+    height: 40px;
+    color: white;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 75%;
+}
+.admininlog button:hover{
+    background-color: #711fc4;
+}
+.admininlog i{
+    font-size: 1.5rem;
+    color: #8000ff;
+}
+
+
+
 
 /* hier komt form styling */
 .form{
     background-image: url(../IMG/homeimg.jpg);
     background-repeat: no-repeat;
     display: flex;
-    background-size: 100vw 100vh;
+    background-size: 100vw 60vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -170,6 +219,7 @@ form button{
    position: absolute;
    top: 270px;
    width: 150px;
+   height: 50px ;
    padding: 0.2rem;
    border: none;
    background-color: #fff;
@@ -295,11 +345,16 @@ form button{
 }
 .boeken-info a{
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   cursor: pointer;
   margin: 1rem;
-  border-bottom: #000 solid 2px;
+  background-color: skyblue;
+  padding: 0.6rem;
+  border-radius: 5px;
+}
+.boeken-info a:hover{
+    background-color: rgb(133, 185, 205);
 }
 .footerinmg{
     width: 100%;
@@ -326,7 +381,10 @@ footer{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #000;
+    background-color: aliceblue;
+    color: #000;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
 
 }
 footer ul{
@@ -337,13 +395,13 @@ footer ul li{
      margin: 1rem;
 }
 footer ul li i{
-    color: #fff;
+    color: #000;
 }
 footer ul li a{
-    color: #fff;
+    color: #000;
 }
 #adminpage{
-    color: #fff;
+    color: #000;
     text-decoration: none;   
 }
 
