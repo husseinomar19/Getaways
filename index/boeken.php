@@ -62,7 +62,8 @@ if(isset($_GET['zoeken'])){
             ";
         }
     } else {
-        echo"<script type='text/javascript'>alert('Geen resultaten gevonden');</script>";
+        echo "<script>alert('Geen resultaten gevonden'); window.location.href='index.php';</script>";
+        
     }
 }
 ?>

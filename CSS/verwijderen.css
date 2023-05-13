@@ -75,13 +75,17 @@ body{
     justify-content: space-between;
     align-items: end;
     flex-direction: column;
+    position: relative;
 }
 .tit-boeken{
     padding: 1rem;
+    align-self: flex-start;
 
 }
 .boeken-prijs{
-    padding: 1rem;
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
 }
 .boeken-info a{
   text-decoration: none;
