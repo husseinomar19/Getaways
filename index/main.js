@@ -10,6 +10,8 @@ inlogptn.addEventListener('click',function(event){
     }
 });
 
-document.addEventListener('click', function(){
-    inlogform.style.visibility = "hidden";
+document.addEventListener('click', function(event){
+   if(!inlogform.contains(event.target)){
+       inlogform.style.visibility = "hidden";
+   }
 });

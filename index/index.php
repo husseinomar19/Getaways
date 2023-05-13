@@ -95,17 +95,17 @@
 <button class="in-ptn">Ontdek</button>
       </div>
       <div class="insp">
-<img src="../IMG/inspiratie4jpg.jpg" alt="inspiratie">
+<img src="../IMG/roma.jpg" alt="inspiratie">
 <h2 class="in-tit">Op vakantie met het gezin</h2>
 <button class="in-ptn">Ontdek</button>
       </div>
       <div class="insp">
-<img src="../IMG/inspiratie4jpg.jpg" alt="inspiratie">
+<img src="../IMG/praag2persoon.jpg" alt="inspiratie">
 <h2 class="in-tit">Op vakantie met het gezin</h2>
 <button class="in-ptn">Ontdek</button>
       </div>
       <div class="insp">
-<img src="../IMG/inspiratie4jpg.jpg" alt="inspiratie">
+<img src="../IMG/protugal.jpg" alt="inspiratie">
 <h2 class="in-tit">Op vakantie met het gezin</h2>
 <button class="in-ptn">Ontdek</button>
       </div>
