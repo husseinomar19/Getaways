@@ -42,7 +42,7 @@
     </header> 
     <section class="form">
         <h2>Unieke vakantie, weg van de massa</h2>
-         <form action="" method="get">
+         <form action="boeken.php" method="GET">
            <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label> 
            <input type="text" name="bestemming" placeholder="Bestemming">
            <label for="ver"><i class="fa-solid fa-calendar-days"></i></label>
@@ -112,7 +112,7 @@
     </section>
 
     <section class="boeken-tit">
-        <h2>Top 6 favoriete ontdekkingen</h2>
+        <h2>Top favoriete ontdekkingen</h2>
     </section>
 
     <section class="boeken">  
