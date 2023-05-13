@@ -149,7 +149,7 @@ while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
     </section>
 
     <section class="footerinmg">
-        <img src="../IMG/inspiratie2.jpg" alt="footer">
+        <img src="../IMG/footer2.jpg" alt="footer">
         <h2>Unieke vakantie, weg van de massa</h2>
     </section>
     <footer>

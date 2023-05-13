@@ -117,10 +117,10 @@ nav ul li a:hover {
 
 /* hier komt form styling */
 .form{
-    background-image: url(../IMG/homeimg.jpg);
+    background-image: url(../IMG/footerimg.jpg);
     background-repeat: no-repeat;
     display: flex;
-    background-size: 100vw 60vh;
+    background-size: 100vw 40vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
