@@ -47,7 +47,7 @@
            <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label> 
            <input type="text" name="bestemming" placeholder="Bestemming">
            <label for="ver"><i class="fa-solid fa-calendar-days"></i></label>
-           <input type="text" name="ver" placeholder="Vertrekdatum">
+           <input type="date" name="ver" placeholder="Vertrekdatum">
            <label for="kamer"><i class="fa-solid fa-person"></i></label>
            <input type="text" name="kamer" placeholder="Personen">
            <label for="lucht"><i class="fa-solid fa-plane"></i></label>

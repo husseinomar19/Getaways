@@ -54,6 +54,45 @@
 #logospan{
     color: #4f4c4c;
 }
+.boeken-title{
+   width: 100%;
+   text-align: center;
+   margin-top: 2rem;
+}
+.geboekt-reizen{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   margin-top: 2rem;  
+}
+.geboekt-main{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 1rem;
+   width: 90%;
+}
+.geboekt{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   padding: 1rem;
+   background-color: #fff;
+   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+   border-radius: 5px;
 
-
+}
+.geboekt a{
+   background-color: red;
+   border: none;
+   padding: 1rem;
+   color: white;
+   border-radius: 1rem;
+   font-weight: bold;
+   cursor: pointer;
+   text-decoration: none;
+}
 
