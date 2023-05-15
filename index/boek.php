@@ -38,7 +38,7 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
     <div class="boeken-form">
         <form action="" method="post">
             <label for="id">Reis nummer</label>
-            <input type="text" name="id" value="<?php echo $data['id'];?>">
+            <!-- <input type="text" name="id" value="<?php echo $data['id'];?>"> -->
             <!-- <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label>  -->
             <input type="text" name="bestemming" value="<?php echo $data['naam'];?>">
             <!-- <label for="prijs"><i class="fa-solid fa-euro-sign"></i></label> -->
@@ -60,7 +60,7 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
         echo"<script>alert('Vul uw gegevens in ')</script>";
     }
       else{
-        $id = $_POST['id'];
+        // $id = $_POST['id'];
         $bestemming = $_POST['bestemming'];
         $prijs = $_POST['prijs'];
         $naam = $_POST['naam'];
@@ -68,8 +68,8 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
         $datum = $_POST['datum'];
         $personen = $_POST['personen'];
         
-        $stmt = $con->prepare("INSERT INTO geboekt ( id, bestemming, prijs, naam, email, datum, personen) VALUES (:id, :bestemming, :prijs, :naam, :email, :datum, :personen)");
-        $stmt->bindParam(':id', $id,);
+        $stmt = $con->prepare("INSERT INTO geboekt (bestemming, prijs, naam, email, datum, personen) VALUES ( :bestemming, :prijs, :naam, :email, :datum, :personen)");
+        // $stmt->bindParam(':id', $id,);
         $stmt->bindParam(':bestemming',  $bestemming);
         $stmt->bindParam(':prijs',  $prijs);
         $stmt->bindParam(':naam',  $naam);

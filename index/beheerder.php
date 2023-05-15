@@ -34,6 +34,42 @@ else
         <a href="verwijderen.php">Reis verwijderen</a>
     </div>
 </div>
+<section class="boeken-title">
+    <h2>Geboekte reizen</h2>
+</section>
+
+<section class="geboekt-reizen">
+    <div class="geboekt-main">
+
+
+    
+        <?php
+include('config.php');
+
+$vragen = $con->query("SELECT * FROM geboekt");
+while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
+    echo"
+    <div class='geboekt'>
+          <h3>$row[id]</h3>
+          <h3>$row[bestemming]</h3>
+          <h3>$row[prijs]</h3>
+          <h3>$row[naam]</h3>
+          <h3>$row[email]</h3>
+          <h3>$row[datum]</h3>
+          <h3>$row[personen]</h3>
+          <a href='geboektverwijderen.php? boekid= $row[id]'>Verwijderen</a>
+        </div>
+    ";
+}
+
+?>
+
+
+
+
+    </div>
+
+</section>
     
     
 </body>
