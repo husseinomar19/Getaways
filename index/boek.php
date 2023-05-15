@@ -39,14 +39,55 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
         <form action="" method="post">
             <label for="id">Reis nummer</label>
             <input type="text" name="id" value="<?php echo $data['id'];?>">
-            <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label> 
+            <!-- <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label>  -->
             <input type="text" name="bestemming" value="<?php echo $data['naam'];?>">
-            <label for="prijs"><i class="fa-solid fa-euro-sign"></i></label>
+            <!-- <label for="prijs"><i class="fa-solid fa-euro-sign"></i></label> -->
             <input type="text" name="prijs" value="<?php echo $data['prijs'];?>">
+            <input type="date" name="datum" placeholder="Kies datum">
+            <span id="boeken-span">Persoons gegevens</span>
             <input type="text" name="naam" placeholder="Naam">
             <input type="email" name="email" placeholder="E-mail">
-            <input type="date" name="datum" placeholder="Kies datum">
-            <input type="text" placeholder="Personen">
-            <button name="Boeken">Boeken</button>
+            <input type="text" name="personen" placeholder="Personen">
+            <button name="boeken">Boeken</button>
         </form>
     </div>
+    <?php
+    include('config.php');
+    
+    if(isset($_POST['boeken'])){
+        if(empty($_POST['naam']) && empty($_POST['email'])&& empty($_POST['personen']))
+    {
+        echo"<script>alert('Vul uw gegevens in ')</script>";
+    }
+      else{
+        $id = $_POST['id'];
+        $bestemming = $_POST['bestemming'];
+        $prijs = $_POST['prijs'];
+        $naam = $_POST['naam'];
+        $email = $_POST['email'];
+        $datum = $_POST['datum'];
+        $personen = $_POST['personen'];
+        
+        $stmt = $con->prepare("INSERT INTO geboekt ( id, bestemming, prijs, naam, email, datum, personen) VALUES (:id, :bestemming, :prijs, :naam, :email, :datum, :personen)");
+        $stmt->bindParam(':id', $id,);
+        $stmt->bindParam(':bestemming',  $bestemming);
+        $stmt->bindParam(':prijs',  $prijs);
+        $stmt->bindParam(':naam',  $naam);
+        $stmt->bindParam(':email',  $email);
+        $stmt->bindParam(':datum',  $datum);
+        $stmt->bindParam(':personen',  $personen);
+        $success = $stmt->execute();
+
+       
+        if ($success) {
+            echo "<script>alert('Bedankt voor het boeken u ontvangd een E-mail binnen twee werkdagen'); window.location.href='index.php';</script>";
+        } else {
+            echo '<script>alert("Insertion failed.");</script>';
+        }
+      }
+    
+
+
+    }
+    
+    ?>

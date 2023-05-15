@@ -77,7 +77,7 @@
     <section class="iconmain">
         <div class="icon">
            <i class="fa-solid fa-plane"></i>
-           <h2>Eenvoedig Boeken</h2>
+           <h2>Eenvoudig Boeken</h2>
         </div>
         <div class="icon">
            <i class="fa-solid fa-thumbs-up"></i>
