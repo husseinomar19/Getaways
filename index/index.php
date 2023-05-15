@@ -20,6 +20,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="over.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <li><a href="#boeken">Boeken</a></li>
             </ul>
             <div class="inloggenptn">
             <i class="fa-solid fa-user"></i>
@@ -111,7 +112,7 @@
       </div>
     </section>
 
-    <section class="boeken-tit">
+    <section class="boeken-tit" id="boeken">
         <h2>Top favoriete ontdekkingen</h2>
     </section>
 
@@ -131,7 +132,7 @@ while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
     <div class='boeken-info'>
          <h2 class='tit-boeken'>$row[naam]</h2>
          <h3 class='boeken-prijs'>$row[prijs]</h3>
-         <a href=''>Boeken</a>               
+         <a href='boek.php? id=$row[id]'>Boeken</a>               
     </div>
 </div>
 
