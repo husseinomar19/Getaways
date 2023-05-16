@@ -17,7 +17,7 @@ if(isset($_POST['aanpassen'])){
     $stmt->bindParam(':foto', $IMGUP);
     $stmt->bindParam(':id', $ID);
 
-    if ($stmt->execute() && move_uploaded_file($IMGLOCATION, 'C:\xampp\htdocs\Getaways\reizenimg/'.$IMGNAAM)) {
+    if ($stmt->execute() && move_uploaded_file($IMGLOCATION, 'C:\xampp1\htdocs\Getaways\reizenimg/'.$IMGNAAM)) {
         echo "<script>alert('succesvolle update'); window.location.href='aanpassen.php';</script>";
     } else {
         echo"<script type='text/javascript'>alert('update is misgelukt');</script>";
