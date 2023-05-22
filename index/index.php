@@ -28,17 +28,17 @@
             </div>
         </nav>
         <form class="admininlog" id="admininlog" action="" method="post">
-        <i class="fa-solid fa-user"></i>
-        <h2>Inloggen</h2>
-        <label for="Email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Email">
-        <label for="password">wachtwoord</label>
-        <input type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord">
-        <button name="inloggen">Inloggen</button>
-        <ul>
-            <li><a href="account.php">Registreren</a></li>
-            <li><a href="#">Wachtwoord vergeten</a></li>
-           </ul>
+         <i class="fa-solid fa-user"></i>
+         <h2>Inloggen</h2>
+         <label for="Email">Email</label>
+         <input type="email" name="email" id="email" placeholder="Email" required>
+         <label for="password">wachtwoord</label>
+         <input type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord" required>
+         <button name="inloggen">Inloggen</button>
+            <ul>
+             <li><a href="account.php">Registreren</a></li>
+             <li><a href="#">Wachtwoord vergeten</a></li>
+            </ul>
         </form>
     </header> 
     <section class="form">
