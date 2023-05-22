@@ -64,12 +64,19 @@ nav ul li a:hover {
     gap: 1rem;
     left: 50%;
     right: 50%;
-    transform: translate(-50%,-50%);
     border-radius: 5px;
     color: #000;
     font-weight: bold; 
     border-radius: 5px;
     visibility: hidden;
+    transform: translateX(100px);
+    
+}
+.admininlog.vis{
+    visibility: visible;
+    transform: translateX(-100px);
+    transform: translate(-50%,-50%);
+    transition: 0.4s;
 }
 .admininlog ul{
     list-style: none;
