@@ -27,6 +27,37 @@
             <button id="inlog">Inloggen</button>
             </div>
         </nav>
+
+        <?php
+ //Set the correct username and password for user inlog 
+ include('config.php');
+ session_start();
+
+if(isset($_POST['inloggen'])){
+    if(empty($_POST['wachtwoord']) && empty($_POST['email']))
+    {
+        echo"<script>alert('Naam en wachtwoord zijn leeg')</script>";
+    }
+    else{
+        $username = $_POST['email'];
+        $password = $_POST['wachtwoord'];
+        $stmt = $con->prepare('SELECT * FROM userstabel WHERE email = :email AND wachtwoord = :wachtwoord');
+        $stmt->execute(['email' => $username, 'wachtwoord' => $password]);
+        $result = $stmt->fetch();
+
+        if ($result) {
+            $_SESSION['username'] = $result['email'];
+            $_SESSION['logged_in'] = true;
+            header('location: beheerder.php'); 
+            exit();
+        }
+        else{
+            echo"<script>alert('naam en wachtwoord bestaat niet')</script>";
+        }
+    }  
+}
+?>
+
         <form class="admininlog" id="admininlog" action="" method="post">
          <i class="fa-solid fa-user"></i>
          <h2>Inloggen</h2>
