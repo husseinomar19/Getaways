@@ -1,7 +1,11 @@
 <?php
+ session_start();
+?>
+
+<?php
  //Set the correct username and password
  include('config.php');
- session_start();
+
 
 if(isset($_POST['inloggen'])){
     if(empty($_POST['wachtwoord']) && empty($_POST['naam']))
@@ -18,6 +22,7 @@ if(isset($_POST['inloggen'])){
         if ($result) {
             $_SESSION['username'] = $result['naam'];
             $_SESSION['logged_in'] = true;
+            $_SESSION['admin_logged_in'] = true;
             header('location: beheerder.php');
             exit();
         }

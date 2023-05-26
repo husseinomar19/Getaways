@@ -13,6 +13,10 @@
     <title>Getaways</title>
 </head>
 <body>
+    <?php
+    session_start();
+    ?>
+    
     <header>
         <nav>
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
@@ -22,16 +26,26 @@
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="#boeken">Boeken</a></li>
             </ul>
-            <div class="inloggenptn">
-            <i class="fa-solid fa-user"></i>
-            <button id="inlog">Inloggen</button>
-            </div>
+            <?php
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true)
+        {
+            echo '<a id="mijn" href="mijngeta.php" class="log">Mijn Getaways</a>';
+        }
+        else
+        {
+            echo "<div class='inloggenptn'>
+            <i class='fa-solid fa-user'></i>
+            <button id='inlog'>Inloggen</button>
+            </div>";
+        }
+        ?>
+            
         </nav>
 
         <?php
  //Set the correct username and password for user inlog 
  include('config.php');
- session_start();
+ 
 
 if(isset($_POST['inloggen'])){
     if(empty($_POST['wachtwoord']) && empty($_POST['email']))
@@ -44,11 +58,10 @@ if(isset($_POST['inloggen'])){
         $stmt = $con->prepare('SELECT * FROM userstabel WHERE email = :email AND wachtwoord = :wachtwoord');
         $stmt->execute(['email' => $username, 'wachtwoord' => $password]);
         $result = $stmt->fetch();
-
         if ($result) {
             $_SESSION['username'] = $result['email'];
             $_SESSION['logged_in'] = true;
-            header('location: beheerder.php'); 
+            header('location: mijngeta.php'); 
             exit();
         }
         else{
@@ -162,6 +175,12 @@ while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
     </div>
     <div class='boeken-info'>
          <h2 class='tit-boeken'>$row[naam]</h2>
+         <i class='fa-solid fa-heart'></i>
+         <ul>
+             <li>Hotel</li>
+             <li>Ontbijt</li>
+             <li>Vliegticket</li>
+         </ul>
          <h3 class='boeken-prijs'>$row[prijs]</h3>
          <a href='boek.php? id=$row[id]'>Boeken</a>               
     </div>
@@ -179,7 +198,6 @@ while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
           
      </div>
     </section>
-
     <section class="footerinmg">
         <img src="../IMG/footer2.jpg" alt="footer">
         <h2>Unieke vakantie weg van de massa</h2>
@@ -187,7 +205,6 @@ while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
     <footer>
         <ul>
             <li><a href="">Voorwaarden</a></li>
-            <li><a href="">Zekerheden</a></li>
             <li><a href="">Cookies</a></li>
             <li><a href="">Privacy policy</a></li>
             <li><a href="">Sitemap</a></li>
@@ -197,7 +214,17 @@ while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
             <li><i class="fa-brands fa-instagram"></i></li>
             <li><i class="fa-brands fa-twitter"></i></li>
         </ul>
-        <a id="adminpage" href="admin.php">Als admin inloggen</a>
+        <?php
+        if(isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] == true)
+        {
+            echo'<a id="adminpage" href="beheerder.php">Admin panel</a>';
+        }
+        else
+        {
+            echo'<a id="adminpage" href="admin.php">Als admin inloggen</a>';
+        }
+        ?>
+        
     </footer>
 
     <script src="../index/main.js"></script>

@@ -56,6 +56,12 @@ if(isset($_GET['zoeken'])){
                 <div class='boeken-info'>
                      <h2 class='tit-boeken'>".$resultaat['naam']."</h2>
                      <h3 class='boeken-prijs'>".$resultaat['prijs']."</h3>
+                     <i class='fa-solid fa-heart'></i>
+                     <ul>
+                      <li>Hotel</li>
+                      <li>Ontbijt</li>
+                      <li>Vliegticket</li>
+                     </ul>
                      <a href='boek.php?id={$resultaat['id']}'>Boeken</a>              
                 </div>
             </div>
@@ -73,3 +79,4 @@ if(isset($_GET['zoeken'])){
          
        </div>
     </section>
+   

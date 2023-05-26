@@ -95,4 +95,19 @@
    cursor: pointer;
    text-decoration: none;
 }
+/* uitloggen button*/
+.uitloggenform{
+   position: absolute;
+   right: 20px;
+   top: 20px;
+}
+.uitloggenform button{
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: aliceblue;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
 
