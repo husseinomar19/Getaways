@@ -432,6 +432,54 @@ footer ul li a{
     color: #000;
     text-decoration: none;   
 }
+/*mijngetaways pagina*/
+.form-ver{
+    margin-top: 1rem;
+    width: 100%;
+}
+.form-ver button{
+    width: 100%;
+}
+.user-gegevens{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    margin-top: 2rem;
+    background-color: aliceblue;
+}
+.user-info{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 1rem;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+}
+.user-info h1{
+   color: #4f4c4c;
+}
+.user-info h3{
+    background-color: aliceblue;
+    padding: 0.4rem;
+    border-radius: 5px;
+    color: #4f4c4c;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+.uersboeken{
+    height: 100%;
+    width: 60%;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+}
+.uersboeken h2{
+    text-align: center;
+    color: #4f4c4c;
+}
 
 
 
