@@ -1,5 +1,8 @@
 <?php
 session_start();
+?>
+<?php
+
 if($_SESSION['logged_in'] == true)
 {
 
@@ -20,6 +23,20 @@ else
     <title>Document</title>
 </head>
 <body>
+  <?php
+  if(isset($_POST['out']))
+  {
+    session_destroy();
+    header('Location: index.php');
+    exit();
+  }
+  ?>  
+
+     <div class="uitloggenform">
+        <form method="post">
+          <button type="submit" name="out">Uitloggen</button>  
+        </form>
+     </div>
     <div class="title">
     <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
     </div>

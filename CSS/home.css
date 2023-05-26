@@ -329,8 +329,6 @@ form button{
     gap: 1rem;
 }
 .boeken-blok{
-  width: 600px;
-  height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -362,6 +360,16 @@ form button{
     position: absolute;
     bottom: 25px;
     left: 10px;
+}
+.boeken-info i{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    
+}
+.boeken-info ul{
+    align-self: self-start;
+    padding: 0rem 2rem;
 }
 .boeken-info a{
   text-decoration: none;
