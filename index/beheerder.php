@@ -3,7 +3,7 @@ session_start();
 ?>
 <?php
 
-if($_SESSION['logged_in'] == true)
+if($_SESSION['admin_logged_in'] == true)
 {
 
 }
@@ -26,7 +26,7 @@ else
   <?php
   if(isset($_POST['out']))
   {
-    session_destroy();
+    $_SESSION['admin_logged_in'] = false;
     header('Location: index.php');
     exit();
   }
