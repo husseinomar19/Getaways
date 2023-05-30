@@ -19,9 +19,7 @@ if(isset($_POST['inloggen'])){
         $stmt->execute(['naam' => $username, 'wachtwoord' => $password]);
         $result = $stmt->fetch();
 
-        if ($result) {
-            $_SESSION['username'] = $result['naam'];
-            $_SESSION['logged_in'] = true;
+        if ($result){
             $_SESSION['admin_logged_in'] = true;
             header('location: beheerder.php');
             exit();

@@ -168,7 +168,7 @@ include('config.php');
 
 $vragen = $con->query("SELECT * FROM reizen ");
 while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
-    echo"
+    echo" 
     <div class='boeken-blok'>   
     <div class='boeken-img'>
         <img src='../reizenimg/$row[img]' alt='boeken'>
