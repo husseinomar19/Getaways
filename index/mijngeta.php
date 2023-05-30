@@ -72,8 +72,23 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
         </div>
         <div class="uersboeken">
             <h2>Mijn Riezen</h2>
-        </div>
+            <?php
+            $usernaam = $_SESSION['username'];
+            $stmt = $con->prepare('SELECT geboekt.bestemming, geboekt.prijs FROM geboekt INNER JOIN userstabel ON geboekt.email = userstabel.email WHERE userstabel.email = :useremail');
+            $stmt->execute(['useremail' => $userEmail]);
+            while($usergeboekt = $stmt->fetch(PDO::FETCH_ASSOC))
+            {
+                echo"<div class='usergeboekt-info'>
+                         <h3>$usergeboekt[bestemming]</h3>
+                         <h3>$usergeboekt[prijs]</h3>
+                         <a href=''>Boeken annuleren</a>
+                   </div>";
+                
 
+            }
+            ?>
+        </div>
+        
 
 </section>
 

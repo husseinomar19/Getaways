@@ -27,12 +27,16 @@
     </section>
     <?php
 include('config.php');
-
+session_start();
+$userinfoemail = $_SESSION['username'];
 $ID = $_GET['id'];
 $up = $con->prepare("SELECT * FROM reizen WHERE id=:id");
+$upuser = $con->prepare("SELECT * FROM userstabel WHERE email = :useremail");
+$upuser->execute(['useremail' => $userinfoemail]);
 $up->bindParam(':id', $ID, PDO::PARAM_INT);
 $up->execute();
-
+$upuser->execute();
+$userinfo = $upuser->fetch(PDO::FETCH_ASSOC);
 $data = $up->fetch(PDO::FETCH_ASSOC);
 ?>
     <div class="boeken-form">
@@ -40,14 +44,14 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
             <label for="id">Reis nummer</label>
             <!-- <input type="text" name="id" value="<?php echo $data['id'];?>"> -->
             <!-- <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label>  -->
-            <input type="text" name="bestemming" value="<?php echo $data['naam'];?>">
+            <input type="text" name="bestemming" value="<?php echo $data['naam'];?>" required>
             <!-- <label for="prijs"><i class="fa-solid fa-euro-sign"></i></label> -->
-            <input type="text" name="prijs" value="<?php echo $data['prijs'];?>">
-            <input type="date" name="datum" placeholder="Kies datum">
+            <input type="text" name="prijs" value="<?php echo $data['prijs'];?>" required>
+            <input type="date" name="datum" placeholder="Kies datum" required>
             <span id="boeken-span">Persoons gegevens</span>
-            <input type="text" name="naam" placeholder="Naam">
-            <input type="email" name="email" placeholder="E-mail">
-            <input type="text" name="personen" placeholder="Personen">
+            <input type="text" name="naam" placeholder="Naam" value="<?php echo $userinfo['naam'];?>" required>
+            <input type="email" name="email" placeholder="E-mail" value="<?php echo $userinfo['email'];?>" required>
+            <input type="text" name="personen" placeholder="Personen" required>
             <button name="boeken">Boeken</button>
         </form>
     </div>
