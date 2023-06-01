@@ -58,10 +58,10 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
     <div class="form-toevoegen">
           <form action="" method="post" enctype="multipart/form-data"> 
             <input type="text" name="id" placeholder="Bestemming"  value="<?php echo $data['id'];?>"> 
-            <input type="text" name="naam" placeholder="Bestemming"  value="<?php echo $data['naam'];?>">
-            <input type="text" name="prijs" placeholder="Prijs"  value="<?php echo $data['prijs'];?>">
+            <input type="text" name="naam" placeholder="Bestemming"  value="<?php echo $data['naam'];?>" required>
+            <input type="text" name="prijs" placeholder="Prijs"  value="<?php echo $data['prijs'];?>" required>
             <label for="Foto">Foto</label>
-            <input type="file" name="foto" id="foto" value="<?php echo $data['img'];?>">
+            <input type="file" name="foto" id="foto" value="<?php echo $data['img'];?>" required>
             <button name="aanpassen">Aanpassen</button>
           </form>
     </div>
