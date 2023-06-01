@@ -44,10 +44,10 @@ if(isset($_POST['toevoegen'])){
 
     <div class="form-toevoegen">
           <form action="" method="post" enctype="multipart/form-data">  
-            <input type="text" name="naam" placeholder="Bestemming">
-            <input type="text" name="prijs" placeholder="Prijs">
+            <input type="text" name="naam" placeholder="Bestemming" required>
+            <input type="text" name="prijs" placeholder="Prijs" required>
             <label for="Foto">Foto</label>
-            <input type="file" name="foto" id="foto">
+            <input type="file" name="foto" id="foto" required>
             <button name="toevoegen">Toevoegen</button>
           </form>
     </div>
