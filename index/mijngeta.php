@@ -71,7 +71,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
 ?>
         </div>
         <div class="uersboeken">
-            <h2>Mijn Reizen</h2>
+            <h2>Mijn Reizen!</h2>
             <?php
             $usernaam = $_SESSION['username'];
             $stmt = $con->prepare('SELECT geboekt.bestemming, geboekt.prijs FROM geboekt INNER JOIN userstabel ON geboekt.email = userstabel.email WHERE userstabel.email = :useremail');
