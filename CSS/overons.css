@@ -1,5 +1,6 @@
 *{
-   
+    padding: 0;
+    margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
@@ -37,7 +38,7 @@ nav ul li a:hover {
     border-bottom: solid 2px #000;
 }
 
-section foto{
+section .foto{
     size: 350px;
     width: 350px;
 }
