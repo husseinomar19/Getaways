@@ -22,7 +22,7 @@
 
 <body>
     <section class="foto">
-     <img src="/reinzenimg/achtergrondoverons.jpeg);" alt="foto">
+     <img src="/reizenimg/achtergrondoverons.jpeg);" alt="foto">
     </section>
 
 </body>
