@@ -21,6 +21,9 @@
 </header>
 
 <body>
+    <section class="foto">
+     
+    </section>
 
 </body>
 

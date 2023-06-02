@@ -38,6 +38,8 @@ nav ul li a:hover {
     border-bottom: solid 2px #000;
 }
 
-section{
+section foto{
+    size: 100%;
+    width: 100%;
     background-image: url(../reinzenimg/achtergrondoverons.jpeg);
 }
