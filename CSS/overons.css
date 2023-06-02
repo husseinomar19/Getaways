@@ -37,3 +37,7 @@ nav ul li{
 nav ul li a:hover {
     border-bottom: solid 2px #000;
 }
+
+body{
+    background-image: url(../reinzenimg/achtergrondoverons.jpeg);
+}
