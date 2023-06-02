@@ -23,7 +23,7 @@
 <body>
     <section>
         <div class="foto">
-        <img src="../reizenimg/achtergrondoverons.jpeg" alt="">
+            <img src="../reizenimg/achtergrondoverons.jpeg" alt="">
         </div>
     </section>
 
