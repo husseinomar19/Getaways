@@ -21,7 +21,7 @@
         <nav>
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php">Hoome</a></li>
                 <li><a href="over.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="#boeken">Boeken</a></li>
