@@ -38,9 +38,9 @@ nav ul li a:hover {
     border-bottom: solid 2px #000;
 }
 
-section .foto{
-    size: 350px;
-    width: 350px;
+section{
+    size: 100%;
+    width: 100%;
 }
 .foto img{
     width: 350px;

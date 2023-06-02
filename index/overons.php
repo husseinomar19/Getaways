@@ -21,8 +21,10 @@
 </header>
 
 <body>
-    <section class="foto">
-     <img src="../reizenimg/achtergrondoverons.jpeg" alt="">
+    <section>
+        <div class="foto">
+        <img src="../reizenimg/achtergrondoverons.jpeg" alt="">
+        </div>
     </section>
 
 </body>
