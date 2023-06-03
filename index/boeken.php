@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/home.css">
-    <link rel="stylesheet" href="../CSS/inlog.css">
+    <link rel="stylesheet" href="../CSS/boeken.css">
     <title>Getaways-boeken</title>
 </head>
 <body>
@@ -18,7 +17,7 @@
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="over.php">Over Ons</a></li>
+                <li><a href="overons.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
@@ -49,7 +48,7 @@ if(isset($_GET['zoeken'])){
     if($query->rowCount() > 0){
         while($resultaat = $query->fetch(PDO::FETCH_ASSOC)){
             echo "
-            <div class='boeken-blok'>   
+            <div class='boeken-blok1'>   
                 <div class='boeken-img'>
                     <img src='../reizenimg/".$resultaat['img']."' alt='boeken'>
                 </div>
@@ -79,4 +78,6 @@ if(isset($_GET['zoeken'])){
          
        </div>
     </section>
-   
+    <script src="../index/main.js"></script>
+</body>
+</html>

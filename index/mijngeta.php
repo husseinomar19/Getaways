@@ -23,7 +23,7 @@ if(isset($_POST['logout'])) {
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="over.php">Over Ons</a></li>
+                <li><a href="overons.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="index.php#boeken">Boeken</a></li>
             </ul>
@@ -45,9 +45,9 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
     include('config.php');
 
 
-    $userEmail = $_SESSION['username'];
-    $stmt = $con->prepare('SELECT * FROM userstabel WHERE email = :email');
-    $stmt->execute(['email' => $userEmail]);
+    $userEmailId = $_SESSION['username'];
+    $stmt = $con->prepare('SELECT * FROM userstabel WHERE id = :id');
+    $stmt->execute(['id' => $userEmailId]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
@@ -73,14 +73,15 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
         <div class="uersboeken">
             <h2>Mijn Reizen!</h2>
             <?php
-            $usernaam = $_SESSION['username'];
-            $stmt = $con->prepare('SELECT geboekt.bestemming, geboekt.prijs FROM geboekt INNER JOIN userstabel ON geboekt.email = userstabel.email WHERE userstabel.email = :useremail');
-            $stmt->execute(['useremail' => $userEmail]);
+            $usernaamId = $_SESSION['username'];
+            $stmt = $con->prepare('SELECT reizen.naam, reizen.prijs, geboekt.datum FROM reizen INNER JOIN geboekt ON reizen.id= geboekt.reizen_id WHERE geboekt.user_id = :id');
+            $stmt->execute(['id' => $usernaamId]);
             while($usergeboekt = $stmt->fetch(PDO::FETCH_ASSOC))
             {
                 echo"<div class='usergeboekt-info'>
-                         <h3>$usergeboekt[bestemming]</h3>
+                         <h3>$usergeboekt[naam]</h3>
                          <h3>$usergeboekt[prijs]</h3>
+                         <h3>$usergeboekt[datum]</h3>
                          <a href=''>Boeken annuleren</a>
                    </div>";
                 

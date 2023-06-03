@@ -63,14 +63,17 @@ else
         <?php
 include('config.php');
 
-$vragen = $con->query("SELECT * FROM geboekt");
+$vragen = $con->query("SELECT reizen.naam, reizen.prijs, geboekt.datum, geboekt.personen, geboekt.id, userstabel.naam AS gebruiker, userstabel.email
+FROM reizen
+INNER JOIN geboekt ON reizen.id = geboekt.reizen_id
+INNER JOIN userstabel ON geboekt.user_id = userstabel.id");
 while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
     echo"
     <div class='geboekt'>
           <h3>$row[id]</h3>
-          <h3>$row[bestemming]</h3>
-          <h3>$row[prijs]</h3>
           <h3>$row[naam]</h3>
+          <h3>$row[prijs]</h3>
+          <h3>$row[gebruiker]</h3>
           <h3>$row[email]</h3>
           <h3>$row[datum]</h3>
           <h3>$row[personen]</h3>
