@@ -17,7 +17,7 @@
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="over.php">Over Ons</a></li>
+                <li><a href="overons.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
@@ -31,8 +31,8 @@ session_start();
 $userinfoemail = $_SESSION['username'];
 $ID = $_GET['id'];
 $up = $con->prepare("SELECT * FROM reizen WHERE id=:id");
-$upuser = $con->prepare("SELECT * FROM userstabel WHERE email = :useremail");
-$upuser->execute(['useremail' => $userinfoemail]);
+$upuser = $con->prepare("SELECT * FROM userstabel WHERE id = :id");
+$upuser->execute(['id' => $userinfoemail]);
 $up->bindParam(':id', $ID, PDO::PARAM_INT);
 $up->execute();
 $upuser->execute();
@@ -42,13 +42,12 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
     <div class="boeken-form">
         <form action="" method="post">
             <label for="id">Reis nummer</label>
-            <!-- <input type="text" name="id" value="<?php echo $data['id'];?>"> -->
-            <!-- <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label>  -->
+            <input type="text" name="idreis" value="<?php echo $data['id'];?>">
             <input type="text" name="bestemming" value="<?php echo $data['naam'];?>" required>
-            <!-- <label for="prijs"><i class="fa-solid fa-euro-sign"></i></label> -->
             <input type="text" name="prijs" value="<?php echo $data['prijs'];?>" required>
             <input type="date" name="datum" placeholder="Kies datum" required>
             <span id="boeken-span">Persoons gegevens</span>
+            <input type="text" name="iduser" placeholder="ID" value="<?php echo $userinfo['id'];?>" required>
             <input type="text" name="naam" placeholder="Naam" value="<?php echo $userinfo['naam'];?>" required>
             <input type="email" name="email" placeholder="E-mail" value="<?php echo $userinfo['email'];?>" required>
             <input type="text" name="personen" placeholder="Personen" required>
@@ -64,20 +63,14 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
         echo"<script>alert('Vul uw gegevens in ')</script>";
     }
       else{
-        // $id = $_POST['id'];
-        $bestemming = $_POST['bestemming'];
-        $prijs = $_POST['prijs'];
-        $naam = $_POST['naam'];
-        $email = $_POST['email'];
+        $idreis = $_POST['idreis'];
+        $iduser = $_POST['iduser'];
         $datum = $_POST['datum'];
         $personen = $_POST['personen'];
         
-        $stmt = $con->prepare("INSERT INTO geboekt (bestemming, prijs, naam, email, datum, personen) VALUES ( :bestemming, :prijs, :naam, :email, :datum, :personen)");
-        // $stmt->bindParam(':id', $id,);
-        $stmt->bindParam(':bestemming',  $bestemming);
-        $stmt->bindParam(':prijs',  $prijs);
-        $stmt->bindParam(':naam',  $naam);
-        $stmt->bindParam(':email',  $email);
+        $stmt = $con->prepare("INSERT INTO geboekt (reizen_id, user_id, datum, personen) VALUES (:idreis, :iduser, :datum, :personen)");
+        $stmt->bindParam(':idreis', $idreis);
+        $stmt->bindParam(':iduser', $iduser);
         $stmt->bindParam(':datum',  $datum);
         $stmt->bindParam(':personen',  $personen);
         $success = $stmt->execute();
@@ -95,3 +88,6 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
     }
     
     ?>
+
+</body>
+</html>

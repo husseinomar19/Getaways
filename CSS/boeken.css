@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+html,body{
+    scroll-behavior: smooth;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;
+}
+#logo{
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+
+}
+nav a{
+    text-decoration: none; 
+    color: #000;
+    font-weight: bold;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-right: 50px;   
+}
+nav ul li{
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+nav ul li a:hover {
+    border-bottom: solid 2px #000;
+
+}
+#logospan{
+    color: #4f4c4c;
+}
+.form{
+    background-image: url(../IMG/footerimg.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: 100vw 40vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+}
+.form h2{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 5);
+}
+.boeken-tit{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.boeken{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.main-boeken{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.boeken-blok1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+.boeken-blok1.showboeken-blok1{
+    opacity: 1;
+    transform: translateY(0);
+}
+.boeken-img{
+    height: 100%;
+    width: 200px;
+}
+.boeken-img img{
+    width: 100%;
+    height: 100%;
+}
+.boeken-info{
+    height: 100%;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: column;
+    position: relative;
+}
+.tit-boeken{
+    padding: 1rem;
+    align-self: self-start;
+
+}
+.boeken-prijs{
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+}
+.boeken-info i{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    
+}
+.boeken-info ul{
+    align-self: self-start;
+    padding: 0rem 2rem;
+}
+.boeken-info a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1rem;
+  background-color: skyblue;
+  padding: 0.6rem;
+  border-radius: 5px;
+}
+.boeken-info a:hover{
+    background-color: rgb(133, 185, 205);
+}

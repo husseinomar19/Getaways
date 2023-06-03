@@ -9,7 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/home.css">
-    <link rel="stylesheet" href="../CSS/inlog.css">
     <title>Getaways</title>
 </head>
 <body>
@@ -59,7 +58,7 @@ if(isset($_POST['inloggen'])){
         $stmt->execute(['email' => $username, 'wachtwoord' => $password]);
         $result = $stmt->fetch();
         if ($result) {
-            $_SESSION['username'] = $result['email'];
+            $_SESSION['username'] = $result['id'];
             $_SESSION['logged_in'] = true;
             header('location: mijngeta.php'); 
             exit();
@@ -86,7 +85,7 @@ if(isset($_POST['inloggen'])){
         </form>
     </header> 
     <section class="form">
-        <h2>Unieke vakantie, weg van de massa</h2>
+        <h2 id="tit-vakantie" class="tit-vakantie">Unieke vakantie, weg van de massa</h2>
          <form action="boeken.php" method="GET">
            <label for="bestemming"><i class="fa-solid fa-location-dot"></i></label> 
            <input type="text" name="bestemming" placeholder="Bestemming">
@@ -106,12 +105,12 @@ if(isset($_POST['inloggen'])){
          <h2 class="ontdektit">Verleidelijke last minutes</h2>
          <button class="ptn-ontdek">Ontdek</button>
         </div>
-        <div class="ontdek1">
+        <div class="ontdek">
         <img src="../IMG/ontdek1.jpg" alt="ontdeken">
         <h2 class="ontdektit">Rustige zomervakantie</h2>
         <button class="ptn-ontdek">Ontdek</button>
         </div>
-        <div class="ontdek2">
+        <div class="ontdek">
         <img src="../IMG/ontdek2.jpg" alt="ontdeken">
         <h2 class="ontdektit">Beste prijzen</h2>
          <button class="ptn-ontdek">Ontdek</button>
@@ -119,6 +118,8 @@ if(isset($_POST['inloggen'])){
     </section>
 
     <section class="iconmain">
+    <span class="animationspan1"></span>
+    <span class="animationspan2"></span>
         <div class="icon">
            <i class="fa-solid fa-plane"></i>
            <h2>Eenvoudig Boeken</h2>
@@ -157,7 +158,7 @@ if(isset($_POST['inloggen'])){
     </section>
 
     <section class="boeken-tit" id="boeken">
-        <h2>Top favoriete ontdekkingen</h2>
+        <h2 id="tit_top" class="tit_top">Top favoriete ontdekkingen</h2>
     </section>
 
     <section class="boeken">  
@@ -200,7 +201,7 @@ while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
     </section>
     <section class="footerinmg">
         <img src="../IMG/footer2.jpg" alt="footer">
-        <h2>Unieke vakantie weg van de massa</h2>
+        <h2 id="tit-animation" class="tit-animation">Unieke vakantie weg van de massa</h2>
     </section>
     <footer>
         <ul>
