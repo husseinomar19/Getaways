@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../CSS/home.css">
     <title>Getaways</title>
 </head>
-test
 <body>
     <?php
     session_start();
