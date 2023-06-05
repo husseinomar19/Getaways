@@ -33,6 +33,7 @@
             <img src="../reizenimg/achtergrondoverons.jpeg" alt="">
         </div>
         <div class="infotext">
+            test
                 Ut dictum nulla a lacinia molestie. Aliquam eleifend, leo nec dapibus volutpat, nisi leo tincidunt
                 tellus, sed cursus nunc enim vel orci. Integer ipsum sem, rhoncus eget bibendum non, consectetur in dui.
                 Quisque faucibus quis enim sit amet sodales. Pellentesque habitant morbi tristique senectus et netus et
