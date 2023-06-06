@@ -16,49 +16,47 @@
     <link rel="stylesheet" href="../CSS/home.css">
 
     <title>Over Ons</title>
+    <header>
+        <nav>
+            <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="overons.php">Over Ons</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="#boeken">Boeken</a></li>
+            </ul>
+        </nav>
+    </header>
+
 </head>
-<header>
-    <nav>
-        <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="overons.php">Over Ons</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="#boeken">Boeken</a></li>
-        </ul>
-    </nav>
-</header>
 
 <body>
     <section>
-        <div class="foto">
-            <img src="../reizenimg/tenerife.jpeg" alt="foto">
+        <div class="containerinfo">
+            <div class="foto"><img src="../reizenimg/laaste.jpg" alt="foto"></div>
+            <div class="infotext">
+                <h4>
+                    Welkom bij Gateways, uw ultieme reispartner! Bij Gateways begrijpen we dat reizen meer is dan alleen
+                    van A naar B gaan. Het gaat om het creëren van onvergetelijke ervaringen, het ontdekken van nieuwe
+                    culturen en het verrijken van uw leven met onvergetelijke herinneringen.
+
+                    Als toonaangevend reisbureau zijn we gepassioneerd door het leveren van hoogwaardige reiservaringen
+                    die voldoen aan de unieke behoeften en verlangens van elke reiziger. Of u nu op zoek bent naar een
+                    ontspannende strandvakantie, een avontuurlijke rondreis, een luxueuze cruise of een op maat gemaakt
+                    pakket, wij hebben het allemaal.
+
+                    Ons ervaren team van reisexperts staat altijd klaar om u te adviseren en te begeleiden bij het
+                    plannen van uw droomreis. We werken samen met gerenommeerde luchtvaartmaatschappijen, hotels en
+                    lokale partners over de hele wereld om u de beste tarieven, exclusieve aanbiedingen en ongeëvenaarde
+                    service te bieden.
+
+                    Gateways is er trots op om uw reiservaring naar nieuwe hoogten te tillen. Laat ons uw gids zijn naar
+                    de meest adembenemende bestemmingen op aarde. Neem vandaag nog contact met ons op en laat ons uw
+                    droomreis werkelijkheid maken!
+                </h4>
+            </div>
         </div>
-        <div class="infotext">
-            test
-            Ut dictum nulla a lacinia molestie. Aliquam eleifend, leo nec dapibus volutpat, nisi leo tincidunt
-            tellus, sed cursus nunc enim vel orci. Integer ipsum sem, rhoncus eget bibendum non, consectetur in dui.
-            Quisque faucibus quis enim sit amet sodales. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. Suspendisse nec sollicitudin dolor. Maecenas nec malesuada mauris.
-            Donec est dui, ultrices tincidunt maximus sed, fermentum sed ipsum. Proin commodo tellus eu sodales
-            imperdiet. Ut purus felis, pellentesque in rutrum quis, tincidunt in quam. Praesent hendrerit eget
-            libero eu tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-            himenaeos. Ut at nunc at sapien egestas dictum. Vivamus luctus sed urna sit amet porta. Interdum et
-            malesuada fames ac ante ipsum primis in faucibus. Proin ut elit ut mauris placerat porttitor non nec nunc.
-            Nunc egestas metus sed dignissim vehicula.
-            Quisque eleifend leo ac nulla placerat imperdiet. Quisque fermentum efficitur metus quis fermentum.
-            Mauris non eleifend mi, et eleifend odio. Donec vulputate, nibh in ultricies molestie, leo odio euismod
-            est, vitae lacinia quam dui vulputate enim. Pellentesque molestie, quam at tempus maximus, turpis lorem
-            elementum diam, non pellentesque sapien diam vel lectus. Nam ipsum eros, suscipit eu vehicula eu,
-            pellentesque sit amet sapien. Nam venenatis turpis at turpis
-            aliquam rutrum. Curabitur dignissim ligula ut consequat viverra. Aliquam sit amet tincidunt nisi. Morbi
-            mattis dignissim ligula nec dictum. Vivamus non tellus velit. Sed dapibus vulputate nulla vel convallis.
-            Nam metus nibh, elementum sit amet ligula sit amet, interdum varius sem. Fusce at tristique lorem, sit
-            amet vehicula mi. Cras sed ipsum vitae lorem pellentesque feugiat ullamcorper at turpis. Nam vulputate,
-            urna et suscipit eleifend, risus mauris lacinia eros, sed vestibulum velit dolor sed nulla. Fusce
-            rhoncus tortor nisi, nec faucibus nulla sodales id. Praesent mi turpis, tincidunt et enim non,
-            consectetur efficitur ex.
-        </div>
+
     </section>
     <footer>
         <ul>
