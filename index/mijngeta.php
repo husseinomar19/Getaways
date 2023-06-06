@@ -63,7 +63,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
         echo '<button type="submit" name="delete">Account verwijderen</button>';
         echo '</form>';
     } else {
-        echo ' Kan Gebruiker account niet vinden.';
+        echo ' Kan Gebruiker account niet vinden..';
     }
 } else {
     echo 'Gebruiker in nog niet ingelogd.';
