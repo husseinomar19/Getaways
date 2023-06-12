@@ -29,7 +29,7 @@ header nav {
     justify-content: space-around;
     align-items: center;
     height: 7vh;
-    margin-right: 407px;
+    margin-right: 410px;
 }
 
 #logo {
@@ -129,7 +129,7 @@ nav ul li a:hover {
     justify-content: center;
 }
 
-.animationspan3{
+.animationspan3 {
     width: 200px;
     height: 200px;
     background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
@@ -138,12 +138,13 @@ nav ul li a:hover {
     left: -40px;
     border-radius: 59% 41% 65% 35% / 20% 16% 84% 80%;
 }
-.animationspan4{
+
+.animationspan4 {
     width: 100px;
     height: 100px;
     background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
     position: absolute;
     top: 530px;
     right: 40px;
-    border-radius: 21% 79% 65% 35% / 60% 30% 70% 40% ;
+    border-radius: 21% 79% 65% 35% / 60% 30% 70% 40%;
 }

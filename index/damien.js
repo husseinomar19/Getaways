@@ -9,15 +9,3 @@ window.onload = function () {
     tekst_overlay.style.transform = "translateX(0)";
   }, 100);
 };
-
-function showCustomAlert() {
-  document.getElementById("customAlert").style.display = "block";
-}
-
-function hideCustomAlert() {
-  document.getElementById("customAlert").style.display = "none";
-}
-
-function redirectToIndex() {
-  window.location.href = "index.php";
-}
