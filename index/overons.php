@@ -14,8 +14,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/overons.css">
     <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../index/damien.js">
 
     <title>Over Ons</title>
+
+</head>
+
+<body>
     <header>
         <nav>
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
@@ -23,17 +28,22 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="overons.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="#boeken">Boeken</a></li>
+                <li><a href="index.php#boeken">Boeken</a></li>
             </ul>
         </nav>
     </header>
 
-</head>
-
-<body>
     <section>
         <div class="containerinfo">
-            <div class="foto"><img src="../reizenimg/laaste.jpg" alt="foto"></div>
+            <div class="foto">
+                <img src="../reizenimg/laaste.jpg" alt="foto">
+                <h2 id="tekstoverlay" class="fade-in">Over Ons</h2>
+            </div>
+        </div>
+
+        <div class="place">
+            <span class="animationspan3"></span>
+            <span class="animationspan4"></span>
             <div class="infotext">
                 <h4>
                     Welkom bij Gateways, uw ultieme reispartner! Bij Gateways begrijpen we dat reizen meer is dan alleen
@@ -56,7 +66,6 @@
                 </h4>
             </div>
         </div>
-
     </section>
     <footer>
         <ul>
@@ -72,5 +81,6 @@
         </ul>
     </footer>
 </body>
+<link rel="stylesheet" href="../index/damien.js">
 
 </html>
