@@ -14,11 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/overons.css">
     <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../index/damien.js">
 
     <title>Over Ons</title>
-</head>
 
-<body>
+</head>
 <header>
     <nav>
         <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
@@ -30,25 +30,36 @@
         </ul>
     </nav>
 </header>
-    <section class="over">
+
+<body>
+    <section>
         <div class="foto">
             <img src="../reizenimg/tenerife.jpeg" alt="foto">
         </div>
         <div class="infotext">
-            <h2>Over Ons</h2>
-        Gateways.nl is opgericht met als doel klanten te helpen bij het boeken van hun droomreizen
-        en het veiligstellen van tickets voor spannende evenementen. We begrijpen dat het plannen
-        van reizen en het regelen van entertainment vaak overweldigend kunnen zijn,
-        en daarom streven we ernaar om het proces zo eenvoudig en stressvrij mogelijk te maken.
-
-        autoverhuur, pakketreizen en tickets voor verschillende evenementen. Onze gebruikersvriendelijke website is ontworpen om intuïtief te zijn en biedt uitgebreide zoek- en filteropties, zodat klanten gemakkelijk kunnen vinden wat ze nodig hebben. Of het nu gaat om een ontspannen strandvakantie, een stedentrip, een avontuurlijke reis of het bijwonen van een concert of sportevenement, bij Gateways.nl vinden klanten de perfecte opties die aansluiten bij hun voorkeuren.
-        Als boekingssite bieden we een breed scala aan diensten aan, waaronder vluchtreserveringen, hotelboekingen,
-
-        ondersteuningsteam staat altijd klaar om vragen te beantwoorden, advies te geven en eventuele problemen op te lossen. We begrijpen dat elke klant uniek is en we streven ernaar om aan hun specifieke behoeften te voldoen. Door nauw samen te werken met gerenommeerde partners in de reis- en entertainmentindustrie, kunnen we hoogwaardige diensten leveren die voldoen aan de verwachtingen van onze klanten.
-        Bij Gateways.nl streven we naar uitmuntendheid in klantenservice. Ons toegewijde en professionele
-
-        en eerlijke informatie aan onze klanten, zodat ze weloverwogen beslissingen kunnen nemen.
-
+            test
+            Ut dictum nulla a lacinia molestie. Aliquam eleifend, leo nec dapibus volutpat, nisi leo tincidunt
+            tellus, sed cursus nunc enim vel orci. Integer ipsum sem, rhoncus eget bibendum non, consectetur in dui.
+            Quisque faucibus quis enim sit amet sodales. Pellentesque habitant morbi tristique senectus et netus et
+            malesuada fames ac turpis egestas. Suspendisse nec sollicitudin dolor. Maecenas nec malesuada mauris.
+            Donec est dui, ultrices tincidunt maximus sed, fermentum sed ipsum. Proin commodo tellus eu sodales
+            imperdiet. Ut purus felis, pellentesque in rutrum quis, tincidunt in quam. Praesent hendrerit eget
+            libero eu tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Ut at nunc at sapien egestas dictum. Vivamus luctus sed urna sit amet porta. Interdum et
+            malesuada fames ac ante ipsum primis in faucibus. Proin ut elit ut mauris placerat porttitor non nec nunc.
+            Nunc egestas metus sed dignissim vehicula.
+            Quisque eleifend leo ac nulla placerat imperdiet. Quisque fermentum efficitur metus quis fermentum.
+            Mauris non eleifend mi, et eleifend odio. Donec vulputate, nibh in ultricies molestie, leo odio euismod
+            est, vitae lacinia quam dui vulputate enim. Pellentesque molestie, quam at tempus maximus, turpis lorem
+            elementum diam, non pellentesque sapien diam vel lectus. Nam ipsum eros, suscipit eu vehicula eu,
+            pellentesque sit amet sapien. Nam venenatis turpis at turpis
+            aliquam rutrum. Curabitur dignissim ligula ut consequat viverra. Aliquam sit amet tincidunt nisi. Morbi
+            mattis dignissim ligula nec dictum. Vivamus non tellus velit. Sed dapibus vulputate nulla vel convallis.
+            Nam metus nibh, elementum sit amet ligula sit amet, interdum varius sem. Fusce at tristique lorem, sit
+            amet vehicula mi. Cras sed ipsum vitae lorem pellentesque feugiat ullamcorper at turpis. Nam vulputate,
+            urna et suscipit eleifend, risus mauris lacinia eros, sed vestibulum velit dolor sed nulla. Fusce
+            rhoncus tortor nisi, nec faucibus nulla sodales id. Praesent mi turpis, tincidunt et enim non,
+            consectetur efficitur ex.
         </div>
     </section>
     <footer>
@@ -65,5 +76,6 @@
         </ul>
     </footer>
 </body>
+<link rel="stylesheet" href="../index/damien.js">
 
 </html>

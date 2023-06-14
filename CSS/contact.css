@@ -1,0 +1,373 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;
+    margin-right: 410px;
+}
+
+#logo {
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    border-bottom: solid 2px #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.forum-box {
+    max-width: 500px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 96%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.form-group textarea {
+    height: 120px;
+    font-weight: bold;
+}
+
+.form-group button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 30%;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+.footerinmg img {
+    width: 100%;
+    height: 100%;
+}
+
+.footerinmg h2 {
+    position: absolute;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 5);
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aliceblue;
+    color: #000;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    margin-top: 125px;
+
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 1rem;
+}
+
+footer ul li i {
+    color: #000;
+}
+
+footer ul li a {
+    color: #000;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+body,
+button,
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.background {
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+}
+
+.screen {
+    position: relative;
+    background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    border-radius: 15px;
+}
+
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+    margin-right: auto;
+}
+
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+}
+
+.screen-header-right {
+    display: flex;
+}
+
+.screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #999;
+}
+
+.screen-body {
+    display: flex;
+}
+
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #000000;
+    font-size: 26px;
+}
+
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #000000;
+}
+
+.app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #888;
+}
+
+.app-form-group {
+    margin-bottom: 15px;
+}
+
+.app-form-group.message {
+    margin-top: 40px;
+}
+
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #000000;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+    color: #666;
+}
+
+.app-form-control:focus {
+    border-bottom-color: #dddddd;
+}
+
+.app-form-button {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.app-form-button:hover {
+    color: #000000;
+}
+
+@media screen and (max-width: 520px) {
+    .screen-body {
+        flex-direction: column;
+    }
+
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+
+    .app-title {
+        flex-direction: row;
+    }
+
+    .app-title span {
+        margin-right: 12px;
+    }
+
+    .app-title:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen-body {
+        padding: 40px;
+    }
+
+    .screen-body-item {
+        padding: 0;
+    }
+}
+
+.animationspan3 {
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    position: absolute;
+    top: 480px;
+    left: -40px;
+    border-radius: 59% 41% 65% 35% / 20% 16% 84% 80%;
+}
+
+.animationspan4 {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    position: absolute;
+    top: 500px;
+    right: 40px;
+    border-radius: 21% 79% 65% 35% / 60% 30% 70% 40%;
+}
