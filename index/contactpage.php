@@ -1,3 +1,40 @@
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "vakantie";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+
+    $sql = "INSERT INTO contact_form (name, email, message)
+            VALUES ('$name', '$email', '$message')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "<script>alert('Form data added to database successfully');</script>";
+    } else {
+        echo "<script>alert('Error: " . $sql . "<br>" . mysqli_error($conn) . "');</script>";
+    }
+
+
+    mysqli_close($conn);
+}
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,7 +44,6 @@
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link href="../CSS/test.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,7 +57,6 @@
     <link rel="stylesheet" href="../CSS/contact.css">
     <link rel="stylesheet" href="../CSS/home.css">
     <title>contactformulier</title>
-
 </head>
 
 <body>
@@ -36,30 +71,39 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
-        <div class="forum-box">
-            <h1>Contact Us</h1>
-            <form>
-                <div class="form-group">
-                    <label for="name">Naam:</label>
-                    <input type="text" id="name" name="name" placeholder="Uw naam">
+    <span class="animationspan3"></span>
+    <span class="animationspan4"></span>
+    <div class="background">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-body">
+                    <div class="screen-body-item left">
+                        <div class="app-title">
+                            <span>CONTACT</span>
+                            <span>ONS</span>
+                        </div>
+                    </div>
+                    <div class="screen-body-item">
+                        <div class="app-form">
+                            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="NAAM" name="name">
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="EMAIL" name="email">
+                                </div>
+                                <div class="app-form-group message">
+                                    <input class="app-form-control" placeholder="BERICHT" name="message">
+                                </div>
+                                <div class="app-form-group buttons">
+                                    <button class="app-form-button">CANCEL</button>
+                                    <button type="submit" class="app-form-button">VERSTUREN</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Uw email">
-                </div>
-                <div class="form-group">
-                    <label for="subject">Onderwerp:</label>
-                    <input type="text" id="subject" name="subject" placeholder="Onderwerp">
-                </div>
-                <div class="form-group">
-                    <label for="message">Bericht:</label>
-                    <textarea id="message" name="message" placeholder="Bericht"></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Verzenden</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
     <footer>

@@ -36,49 +36,53 @@
 </head>
 
 <body>
-    <article>
-        <section class="card">
-            <div class="text-content">
-                <h3>Contact Ons</h3>
-                <p>Contact ons voor vragen, opmerkingen en ondersteuning. We staan klaar om je te helpen en jouw
-                    feedback te ontvangen. Neem contact met ons op en we reageren zo snel mogelijk!</p>
-                <a href="contactpage.php">Contact Us</a>
-            </div>
-            <div class="visual">
-                <img src="../IMG/contact-foto.webp" alt="" />
-            </div>
-        </section>
-    </article>
-    <article>
-        <section class="card">
-            <div class="text-content">
-                <h3>Laat een review achter!</h3>
-                <p>"Laat een review achter! Jouw mening is belangrijk voor ons. Deel jouw ervaring en help ons om onze
-                    producten/diensten te verbeteren. Laat een review achter en we waarderen jouw feedback enorm!"</p>
-                <form>
-                    <div class="rating">
-                        <input type='radio' hidden name='rate' id='rating_5' data-idx='0'>
-                        <label for='rating_5'></label>
+    <section>
+        <article>
+            <section class="card">
+                <div class="text-content">
+                    <h3>Contact Ons</h3>
+                    <p>Contact ons voor vragen, opmerkingen en ondersteuning. We staan klaar om je te helpen en jouw
+                        feedback te ontvangen. Neem contact met ons op en we reageren zo snel mogelijk!</p>
+                    <a href="contactpage.php">Contact Us</a>
+                </div>
+                <div class="visual">
+                    <img src="../IMG/contact-foto.webp" alt="" />
+                </div>
+            </section>
+        </article>
+        <article>
+            <section class="card">
+                <div class="text-content">
+                    <h3>Laat een review achter!</h3>
+                    <p>"Laat een review achter! Jouw mening is belangrijk voor ons. Deel jouw ervaring en help ons om
+                        onze
+                        producten/diensten te verbeteren. Laat een review achter en we waarderen jouw feedback enorm!"
+                    </p>
+                    <form>
+                        <div class="rating">
+                            <input type='radio' hidden name='rate' id='rating_5' data-idx='0'>
+                            <label for='rating_5'></label>
 
-                        <input type='radio' hidden name='rate' id='rating_4' data-idx='1'>
-                        <label for='rating_4'></label>
+                            <input type='radio' hidden name='rate' id='rating_4' data-idx='1'>
+                            <label for='rating_4'></label>
 
-                        <input type='radio' hidden name='rate' id='rating_3' data-idx='2'>
-                        <label for='rating_3'></label>
+                            <input type='radio' hidden name='rate' id='rating_3' data-idx='2'>
+                            <label for='rating_3'></label>
 
-                        <input type='radio' hidden name='rate' id='rating_2' data-idx='3'>
-                        <label for='rating_2'></label>
+                            <input type='radio' hidden name='rate' id='rating_2' data-idx='3'>
+                            <label for='rating_2'></label>
 
-                        <input type='radio' hidden name='rate' id='rating_1' data-idx='4'>
-                        <label for='rating_1'></label>
-                    </div>
-                </form>
-            </div>
-            <div class="visual">
-                <img src="../IMG/review-foto.jpeg" alt="foto" />
-            </div>
-        </section>
-    </article>
+                            <input type='radio' hidden name='rate' id='rating_1' data-idx='4'>
+                            <label for='rating_1'></label>
+                        </div>
+                    </form>
+                </div>
+                <div class="visual">
+                    <img src="../IMG/review-foto.jpeg" alt="foto" />
+                </div>
+            </section>
+        </article>
+    </section>
     <footer>
         <ul>
             <li><a href="">Voorwaarden</a></li>
@@ -93,5 +97,6 @@
         </ul>
     </footer>
 </body>
+
 
 </html>
