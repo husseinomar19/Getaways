@@ -277,12 +277,16 @@ form button{
     margin-top: 10px;
 }
 /* Hier komt inspiratie section*/
-.inspiratie{
+.inspmain{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     width: 100%;
+}
+.inspiratie{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
 
@@ -291,6 +295,7 @@ form button{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
     width: 300px;
     height: 200px;
@@ -540,6 +545,57 @@ footer ul li a{
     border-radius: 5px; 
     color: #000;
 }
+@media only screen and (max-width: 1279px) {
+    .ontdeken{
+     display: none;
+    }
+    .main-boeken{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .boeken-blok{
+      width: 500px;
+    }
+}
+@media only screen and (max-width: 835px) {
+    .animationspan1{
+        display: none;
+    }
+    .animationspan2{
+        display: none;
+    }
+    .iconmain{   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+}
+@media only screen and (max-width: 1292px){
+
+  .inspiratie{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   
+
+  }
+}
+@media only screen and (max-width: 680px){
+
+    .inspiratie{
+     display: grid;
+     grid-template-columns: 1fr ;
+     
+  
+    }
+  }
+
 
 
 
