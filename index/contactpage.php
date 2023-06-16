@@ -1,37 +1,22 @@
 <?php
+include('config.php');
+if(isset($_POST['send'])){
+    $naam = $_POST['name'];
+    $email = $_POST['email'];
+    $sms = $_POST['message'];
+    $stem = $con->prepare(" INSERT INTO contact_form (name, email, message) VALUE (:naam, :email, :sms)");
+    $stem->bindParam(':naam', $naam);
+    $stem->bindParam(':email', $email);
+    $stem->bindParam(':sms', $sms);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
-
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "vakantie";
-
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
+    if($stem->execute()){
+        echo"<script>alert('Bedankt voor u message')</script>";
     }
-
-
-    $sql = "INSERT INTO contact_form (name, email, message)
-            VALUES ('$name', '$email', '$message')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "<script>alert('Form data added to database successfully');</script>";
-    } else {
-        echo "<script>alert('Error: " . $sql . "<br>" . mysqli_error($conn) . "');</script>";
+    else{
+        echo"<script>alert('Er is iets fout gegaan')</script>";
     }
-
-
-    mysqli_close($conn);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="screen-body-item">
                         <div class="app-form">
-                            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                            <form method="POST">
                                 <div class="app-form-group">
                                     <input class="app-form-control" placeholder="NAAM" name="name">
                                 </div>
@@ -93,11 +78,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <input class="app-form-control" placeholder="EMAIL" name="email">
                                 </div>
                                 <div class="app-form-group message">
-                                    <input class="app-form-control" placeholder="BERICHT" name="message">
+                                    <textarea class="app-form-control" name="message" id="" cols="30" rows="5" placeholder="BERICHT"></textarea>
                                 </div>
                                 <div class="app-form-group buttons">
                                     <button class="app-form-button">CANCEL</button>
-                                    <button type="submit" class="app-form-button">VERSTUREN</button>
+                                    <button type="submit" class="app-form-button" name="send">VERSTUREN</button>
                                 </div>
                             </form>
                         </div>
