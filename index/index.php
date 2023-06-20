@@ -207,7 +207,7 @@ while($row = $vragen->fetch(PDO::FETCH_ASSOC)){
     </section>
     <footer>
         <ul>
-            <li><a href="">Voorwaarden</a></li>
+            <li><a href="privacy.php">Voorwaarden</a></li>
             <li><a href="">Cookies</a></li>
             <li><a href="privacy.php">Privacy policy</a></li>
             <li><a href="">Sitemap</a></li>

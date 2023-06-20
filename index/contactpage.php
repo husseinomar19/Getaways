@@ -94,9 +94,9 @@ if(isset($_POST['send'])){
     </div>
     <footer>
         <ul>
-            <li><a href="">Voorwaarden</a></li>
+            <li><a href="privacy.php">Voorwaarden</a></li>
             <li><a href="">Cookies</a></li>
-            <li><a href="">Privacy policy</a></li>
+            <li><a href="privacy.php">Privacy policy</a></li>
             <li><a href="">Sitemap</a></li>
         </ul>
         <ul>
