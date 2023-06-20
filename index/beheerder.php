@@ -78,7 +78,7 @@ INNER JOIN userstabel ON geboekt.user_id = userstabel.id");
           <h3>$row[email]</h3>
           <h3>$row[datum]</h3>
           <h3>$row[personen]</h3>
-          <a href='geboektverwijderen.php? boekid= $row[id]'>Verwijderen</a>
+          <a href='geboektverwijderen.php?boekid=$row[id]'>Verwijderen</a>
         </div>
     ";
             }

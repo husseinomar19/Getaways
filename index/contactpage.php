@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config.php');
 if(isset($_POST['send'])){
     $naam = $_POST['name'];
