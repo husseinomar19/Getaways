@@ -19,7 +19,7 @@
     <header>
         <nav>
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
-            <ul>
+            <ul class="headerbar ">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="overons.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
@@ -38,9 +38,9 @@
             </div>";
         }
         ?>
-            
+            <i id="bars" class="fa-solid fa-bars"></i>
         </nav>
-
+    </header>
         <?php
  //Set the correct username and password for user inlog 
  include('config.php');
