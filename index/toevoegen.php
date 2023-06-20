@@ -16,7 +16,7 @@ if(isset($_POST['toevoegen'])){
 
     // Execute the statement
     $stmt->execute();
-    if(move_uploaded_file($IMGLOCATION,'C:\xampp1\htdocs\Getaways\reizenimg/'.$IMGNAAM )){
+    if(move_uploaded_file($IMGLOCATION,'C:\xampp\htdocs\Getaways\reizenimg/'.$IMGNAAM )){
         echo"<script>alert('succesvolle update')</script>";
     }else{
         echo"<script type='text/javascript'>alert('update is misgelukt');</script>";

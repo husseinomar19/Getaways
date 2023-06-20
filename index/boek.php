@@ -15,7 +15,7 @@
     <header>
         <nav>
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
-            <ul>
+            <ul class="headerul">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="overons.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
@@ -42,14 +42,14 @@ $data = $up->fetch(PDO::FETCH_ASSOC);
     <div class="boeken-form">
         <form action="" method="post">
             <label for="id">Reis nummer</label>
-            <input type="text" name="idreis" value="<?php echo $data['id'];?>">
-            <input type="text" name="bestemming" value="<?php echo $data['naam'];?>" required>
-            <input type="text" name="prijs" value="<?php echo $data['prijs'];?>" required>
+            <input type="text" name="idreis" value="<?php echo $data['id'];?>" readonly>
+            <input type="text" name="bestemming" value="<?php echo $data['naam'];?>" required readonly>
+            <input type="text" name="prijs" value="<?php echo $data['prijs'];?>" required readonly>
             <input type="date" name="datum" placeholder="Kies datum" required>
             <span id="boeken-span">Persoons gegevens</span>
-            <input type="text" name="iduser" placeholder="ID" value="<?php echo $userinfo['id'];?>" required>
-            <input type="text" name="naam" placeholder="Naam" value="<?php echo $userinfo['naam'];?>" required>
-            <input type="email" name="email" placeholder="E-mail" value="<?php echo $userinfo['email'];?>" required>
+            <input type="text" name="iduser" placeholder="ID" value="<?php echo $userinfo['id'];?>" required readonly>
+            <input type="text" name="naam" placeholder="Naam" value="<?php echo $userinfo['naam'];?>" required readonly>
+            <input type="email" name="email" placeholder="E-mail" value="<?php echo $userinfo['email'];?>" required readonly>
             <input type="text" name="personen" placeholder="Personen" required>
             <button name="boeken">Boeken</button>
         </form>

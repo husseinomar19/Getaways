@@ -15,7 +15,6 @@ header nav {
     justify-content: space-around;
     align-items: center;
     height: 7vh;
-    margin-right: 410px;
 }
 
 #logo {
@@ -34,7 +33,6 @@ nav a {
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: 50px;
 }
 
 nav ul li {
@@ -51,8 +49,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
-    height: 100vh;
-    width: 100vw;
 }
 
 .container {

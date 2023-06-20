@@ -42,7 +42,7 @@ if(isset($_GET['zoeken'])){
     $zoekterm = "%".$_GET['bestemming']."%";
 
     $query = $con->prepare("SELECT * FROM reizen WHERE naam LIKE :zoekterm");
-    $query->bindParam(":zoekterm", $zoekterm);
+    $query->bindParam(":zoekterm", $zoekterm); 
     $query->execute();
 
     if($query->rowCount() > 0){

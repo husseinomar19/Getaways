@@ -18,11 +18,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/contact.css">
-    <link rel="stylesheet" href="../CSS/home.css">
     <link rel="stylesheet" href="../CSS/review.css">
 
     <title> Contact</title>
-    <header>
+</head>
+
+<body>
+<header>
         <nav>
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
             <ul>
@@ -33,9 +35,6 @@
             </ul>
         </nav>
     </header>
-</head>
-
-<body>
     <section>
         <article>
             <section class="card">

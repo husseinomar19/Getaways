@@ -29,7 +29,6 @@ header nav {
     justify-content: space-around;
     align-items: center;
     height: 7vh;
-    margin-right: 410px;
 }
 
 #logo {
@@ -60,37 +59,35 @@ nav ul li a:hover {
     border-bottom: solid 2px #000;
 }
 
-.containerinfo {
+section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 300px;
-    text-align: center;
+    width: 100%;
+    height: 100%;
 }
+
 
 .foto {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 300px;
-    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+
 }
 
 .foto img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 400px;
 }
 
 .infotext {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    display: flex;
     padding: 20px;
-    margin-top: 75px;
-    text-align: center;
+    font-size: 16px;
+    width: 60%;
+    margin-top: 3rem;
 }
 
 #tekstoverlay {
@@ -123,7 +120,7 @@ nav ul li a:hover {
 
 
 .place {
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,4 +144,32 @@ nav ul li a:hover {
     top: 530px;
     right: 40px;
     border-radius: 21% 79% 65% 35% / 60% 30% 70% 40%;
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aliceblue;
+    color: #000;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    margin-top: 125px;
+
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 1rem;
+}
+
+footer ul li i {
+    color: #000;
+}
+
+footer ul li a {
+    color: #000;
 }

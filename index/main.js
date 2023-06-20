@@ -67,4 +67,10 @@ window.onscroll = function() {
 
 
 };
+///nav bar 
+let nav = document.getElementById("bars");
+let headerbar = document.querySelector(".headerbar");
+nav.addEventListener('click', function(){
+    headerbar.classList.toggle("headerbar1");
+});
 

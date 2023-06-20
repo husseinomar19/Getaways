@@ -19,7 +19,7 @@
     <header>
         <nav>
             <a id="logo" href="index.php"> <span id="logospan">G</span>eta<span id="logospan">W</span>ays.nl</a>
-            <ul>
+            <ul class="headerbar ">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="overons.php">Over Ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
@@ -38,9 +38,9 @@
             </div>";
         }
         ?>
-            
+            <i id="bars" class="fa-solid fa-bars"></i>
         </nav>
-
+    </header>
         <?php
  //Set the correct username and password for user inlog 
  include('config.php');
@@ -134,7 +134,8 @@ if(isset($_POST['inloggen'])){
         </div>
     </section>
 
-    <section class="inspiratie">
+<div class="inspmain">
+<div class="inspiratie">
       <div class="insp">
 <img src="../IMG/inspiratie4jpg.jpg" alt="inspiratie">
 <h2 class="in-tit">Op vakantie met het gezin</h2>
@@ -155,7 +156,8 @@ if(isset($_POST['inloggen'])){
 <h2 class="in-tit">Op vakantie met het gezin</h2>
 <button class="in-ptn">Ontdek</button>
       </div>
-    </section>
+</div>
+</div>
 
     <section class="boeken-tit" id="boeken">
         <h2 id="tit_top" class="tit_top">Top favoriete ontdekkingen</h2>
