@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/berichten.css">
-    <title>Toevoegen</title>
+    <title>Berichten</title>
 </head>
 <body>
     <div class="title">
@@ -14,25 +14,28 @@
     <div class="terug-admin">
         <a href="beheerder.php">Terug naar Beheerder panel</a>
     </div>
-  <?php
-  include('config.php');
-  $stmt = $con->prepare(" SELECT * FROM ");
-  ?>    
-    <section class="sms">
-        <div class="briecht">
-            <h3>ddd</h3>
-        </div>
-        <div class="briecht">
-            <h3>dd</h3>
-        </div>
-        <div class="briecht">
-            <h3>ddd</h3>
-        </div>
-        <div class="briecht">
-            <a href="">Verwijderen</a>
-        </div>
+    <?php
+include('config.php');
 
-    </section>
+$sms = $con->query("SELECT * FROM contact_form");
+while($row = $sms->fetch(PDO::FETCH_ASSOC)){
+    echo "<section class='sms'>
+        <div class='briecht'>
+            <p>".$row['name']."</p>
+        </div>
+        <div class='briecht'>
+            <p>".$row['email']."</p>
+        </div>
+        <div class='briecht'>
+            <p>".$row['message']."</p>
+        </div>
+        <div class='briecht'>
+            <a href='birchtver.php?id={$row['id']}'>Verwijderen</a>
+        </div>
+    </section>";
+}
+?>
+  
     
     
 </body>
